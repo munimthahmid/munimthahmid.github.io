@@ -9,6 +9,7 @@ author_profile: true
 
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
+  <div class="wordwrap">Not sure why not working</div>
 
 {% include base_path %}
 {% for post in site.publications reversed %}
