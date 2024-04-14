@@ -11,8 +11,6 @@ author_profile: true
 {% endif %}
 
 {% include base_path %}
-**No Idea what is doing here**
-
 {% for post in site.publications reversed %}
 {% include archive-single.html %}
 {% endfor %}
