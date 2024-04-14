@@ -21,7 +21,7 @@ repository: "munimthahmid/munimthahmid.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar:"/images/munim-thahmid.jpg"
+  avatar: "/images/munim-thahmid.jpg"
   name: "Munim Thahmid"
   pronouns: # example: "she/her"
   bio: "A 3rd year Computer Science Student"
