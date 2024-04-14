@@ -21,7 +21,7 @@ repository: "munimthahmid/munimthahmid.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar: "/images/munim-thahmid.jpg"
+  avatar: "munim-thahmid.jpg"
   name: "Munim Thahmid"
   pronouns: # example: "she/her"
   bio: "A 3rd year Computer Science Student"
@@ -64,7 +64,7 @@ author:
   steam: # Username
   telegram: # URL
   tumblr: # Username
-  twitter: "UniofOxford" # Replace this with your X / Twitter handle
+  twitter: "MunimThahm81566" # Replace this with your X / Twitter handle
   vine: # Username
   weibo: # Username
   wikipedia: # Username
