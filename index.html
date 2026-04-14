@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munim Thahmid — Researcher & Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --text: #1a1a1a;
+            --text-secondary: #555;
+            --text-tertiary: #888;
+            --accent: #1a4d8f;
+            --accent-hover: #0f3766;
+            --border: #e0ddd8;
+            --card-bg: #ffffff;
+            --tag-bg: #f0eeea;
+            --serif: 'Source Serif 4', Georgia, serif;
+            --sans: 'IBM Plex Sans', -apple-system, sans-serif;
+            --mono: 'IBM Plex Mono', monospace;
+            --max-width: 720px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 250, 248, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        nav .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 54px;
+        }
+        nav .nav-name {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        nav .nav-links { display: flex; gap: 28px; }
+        nav .nav-links a {
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+        }
+        nav .nav-links a:hover { color: var(--text); }
+
+        /* ── LAYOUT ── */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section { padding: 56px 0; }
+        section + section { border-top: 1px solid var(--border); }
+
+        .section-label {
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary);
+            margin-bottom: 24px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 64px 0 56px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .hero-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: var(--border);
+            /* placeholder — replace src with your photo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--text-tertiary);
+            border: 3px solid var(--border);
+        }
+        .hero-text h1 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .hero-text .subtitle {
+            font-size: 15.5px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .hero-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .hero-links a {
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+        .hero-links a:hover { color: var(--accent-hover); text-decoration: underline; }
+        .hero-links a svg { width: 14px; height: 14px; }
+
+        /* ── ABOUT ── */
+        .about-text {
+            font-size: 15.5px;
+            color: var(--text);
+            line-height: 1.8;
+        }
+        .about-text p + p { margin-top: 14px; }
+
+        /* ── RESEARCH INTERESTS ── */
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .interest-tag {
+            font-size: 13px;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 20px;
+            background: var(--tag-bg);
+            color: var(--text-secondary);
+            letter-spacing: 0.01em;
+        }
+
+        /* ── PUBLICATIONS ── */
+        .pub-item {
+            padding: 20px 0;
+        }
+        .pub-item + .pub-item {
+            border-top: 1px solid var(--border);
+        }
+        .pub-title {
+            font-family: var(--serif);
+            font-size: 16.5px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+        .pub-title a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        .pub-title a:hover { color: var(--accent); }
+        .pub-authors {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .pub-authors strong { font-weight: 600; color: var(--text); }
+        .pub-venue {
+            font-size: 13.5px;
+            color: var(--text-tertiary);
+            font-style: italic;
+        }
+        .pub-links {
+            margin-top: 8px;
+            display: flex;
+            gap: 16px;
+        }
+        .pub-links a {
+            font-size: 12.5px;
+            font-weight: 500;
+            font-family: var(--mono);
+            color: var(--accent);
+            text-decoration: none;
+            padding: 3px 10px;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .pub-links a:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* ── PROJECTS ── */
+        .project-item {
+            padding: 20px 0;
+        }
+        .project-item + .project-item {
+            border-top: 1px solid var(--border);
+        }
+        .project-name {
+            font-weight: 600;
+            font-size: 15.5px;
+            margin-bottom: 4px;
+        }
+        .project-name a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        .project-name a:hover { color: var(--accent); }
+        .project-desc {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 8px;
+        }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .tech-tag {
+            font-size: 11.5px;
+            font-family: var(--mono);
+            font-weight: 400;
+            padding: 2px 8px;
+            border-radius: 3px;
+            background: var(--tag-bg);
+            color: var(--text-tertiary);
+        }
+
+        /* ── EXPERIENCE ── */
+        .exp-item { padding: 20px 0; }
+        .exp-item + .exp-item { border-top: 1px solid var(--border); }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .exp-role {
+            font-weight: 600;
+            font-size: 15.5px;
+        }
+        .exp-date {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            font-family: var(--mono);
+            white-space: nowrap;
+        }
+        .exp-org {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+        .exp-desc {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ── EDUCATION ── */
+        .edu-item { padding: 16px 0; }
+        .edu-item + .edu-item { border-top: 1px solid var(--border); }
+        .edu-degree { font-weight: 600; font-size: 15.5px; margin-bottom: 2px; }
+        .edu-school { font-size: 14.5px; color: var(--text-secondary); }
+        .edu-details { font-size: 13.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 600px) {
+            .hero { flex-direction: column; gap: 24px; padding: 40px 0 40px; }
+            .hero-photo { width: 96px; height: 96px; font-size: 32px; }
+            .hero-text h1 { font-size: 25px; }
+            section { padding: 40px 0; }
+            nav .nav-links { gap: 18px; }
+            nav .nav-links a { font-size: 13px; }
+            .exp-header { flex-direction: column; gap: 2px; }
+        }
+
+        /* ── PRINT ── */
+        @media print {
+            nav { display: none; }
+            section { padding: 24px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-name">Munim Thahmid</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="about">
+        <div class="hero-photo">
+            <!-- Replace this div with: <img src="photo.jpg" alt="Munim Thahmid" class="hero-photo"> -->
+            MT
+        </div>
+        <div class="hero-text">
+            <h1>Munim Thahmid</h1>
+            <p class="subtitle">
+                Final-year CS undergraduate at BUET. Researching at the intersection of
+                high-performance computing and ML systems. Building production voice AI infrastructure.
+            </p>
+            <div class="hero-links">
+                <a href="mailto:your.email@example.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://github.com/munimthahmid" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    GitHub
+                </a>
+                <a href="https://scholar.google.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    Scholar
+                </a>
+                <a href="cv.pdf" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    CV
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section>
+        <div class="section-label">About</div>
+        <div class="about-text">
+            <p>
+                I am a final-year Computer Science &amp; Engineering student at Bangladesh University of
+                Engineering and Technology (BUET). My research interests lie in <strong>high-performance
+                computing</strong> and <strong>ML systems</strong> — specifically, profiling and optimizing
+                the runtime performance of machine learning inference pipelines.
+            </p>
+            <p>
+                Alongside my academic work, I have two years of production experience building voice AI
+                and LLM-powered systems as a freelance engineer. I have architected and deployed
+                real-time voice pipelines serving hundreds of daily users, working across the full stack
+                from telephony integration to LLM orchestration.
+            </p>
+            <p>
+                I am seeking PhD positions for Fall 2027 in HPC/ML Systems.
+            </p>
+        </div>
+        <div class="interests">
+            <span class="interest-tag">HPC / ML Systems</span>
+            <span class="interest-tag">ML Inference Optimization</span>
+            <span class="interest-tag">Voice AI Infrastructure</span>
+            <span class="interest-tag">LLM Systems</span>
+            <span class="interest-tag">Performance Profiling</span>
+        </div>
+    </section>
+
+    <!-- ── PUBLICATIONS ── -->
+    <section id="publications">
+        <div class="section-label">Publications</div>
+
+        <div class="pub-item">
+            <div class="pub-title">
+                <a href="#">Your Paper Title Here</a>
+            </div>
+            <div class="pub-authors">
+                <strong>Munim Thahmid</strong>, Co-Author Name, Co-Author Name
+            </div>
+            <div class="pub-venue">Submitted to Interspeech 2026</div>
+            <div class="pub-links">
+                <a href="#">pdf</a>
+                <a href="#">arxiv</a>
+                <a href="#">code</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-title">
+                <a href="#">End-to-End Profiling of Production Voice AI Pipelines</a>
+            </div>
+            <div class="pub-authors">
+                <strong>Munim Thahmid</strong>
+            </div>
+            <div class="pub-venue">In preparation — targeting arXiv preprint, August 2026</div>
+            <div class="pub-links">
+                <a href="#">coming soon</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+        <div class="section-label">Selected Projects</div>
+
+        <div class="project-item">
+            <div class="project-name"><a href="https://loopz.ai" target="_blank">Loopz.ai ↗</a></div>
+            <div class="project-desc">
+                Production voice AI platform with real-time conversational agents. Architected the
+                end-to-end voice pipeline, LLM integration, and telephony infrastructure.
+            </div>
+            <div class="project-tech">
+                <span class="tech-tag">Vapi</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">ElevenLabs</span>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-name"><a href="https://assistmind.ai" target="_blank">AssistMind.ai ↗</a></div>
+            <div class="project-desc">
+                AI-powered voice assistant platform with configurable agents, Stripe billing,
+                and real-time analytics dashboard. Built full backend and billing infrastructure.
+            </div>
+            <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">LiveKit</span>
+                <span class="tech-tag">Deepgram</span>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-name"><a href="https://phoneline.helloyobo.com" target="_blank">HelloYobo Phoneline ↗</a></div>
+            <div class="project-desc">
+                Voice AI phone system for automated customer interactions. Designed the call routing
+                logic, speech pipeline, and conversation state management.
+            </div>
+            <div class="project-tech">
+                <span class="tech-tag">Vapi</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Deepgram</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+        <div class="section-label">Experience</div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-role">Freelance Voice AI & LLM Engineer</span>
+                <span class="exp-date">2024 — present</span>
+            </div>
+            <div class="exp-org">Upwork — Multiple Clients</div>
+            <div class="exp-desc">
+                Design and deploy production voice AI systems and LLM-powered backends for SaaS
+                clients. Work spans real-time voice pipelines, telephony integration, billing
+                infrastructure, and full-stack application development. Multiple live deployments
+                serving daily users.
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-role">Undergraduate Researcher</span>
+                <span class="exp-date">2025 — present</span>
+            </div>
+            <div class="exp-org">BUET — Dept. of Computer Science & Engineering</div>
+            <div class="exp-desc">
+                Thesis research on profiling and optimizing ML inference pipelines. Investigating
+                end-to-end latency characteristics of production voice AI systems to identify
+                computational bottlenecks.
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section id="education">
+        <div class="section-label">Education</div>
+
+        <div class="edu-item">
+            <div class="edu-degree">B.Sc. in Computer Science & Engineering</div>
+            <div class="edu-school">Bangladesh University of Engineering and Technology (BUET)</div>
+            <div class="edu-details">Expected 2026</div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Munim Thahmid · Updated April 2026</p>
+</footer>
+
+</body>
+</html>
