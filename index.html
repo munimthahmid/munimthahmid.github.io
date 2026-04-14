@@ -101,16 +101,18 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            object-fit: cover;
             flex-shrink: 0;
             background: var(--border);
-            /* placeholder — replace src with your photo */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: var(--text-tertiary);
             border: 3px solid var(--border);
+            overflow: hidden;
+            position: relative;
+        }
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(2);
+            transform-origin: center 35%;
         }
         .hero-text h1 {
             font-family: var(--serif);
@@ -356,7 +358,9 @@
 
     <!-- ── HERO ── -->
     <section class="hero" id="about">
-        <img src="profile.png" alt="Munim Thahmid" class="hero-photo">
+        <div class="hero-photo">
+            <img src="profile.png" alt="Munim Thahmid">
+        </div>
 
         <div class="hero-text">
             <h1>Munim Thahmid</h1>
@@ -397,8 +401,8 @@
                 I am a final-year Computer Science &amp; Engineering student at Bangladesh University of
                 Engineering and Technology (BUET). My research interests span <strong>reliable and
                 secure software systems</strong>, <strong>AI for software engineering</strong>, and
-                <strong>LLMs for code</strong>, with a particular focus on software reliability,
-                testing, and configuration and deployment correctness.
+                <strong>LLMs for code</strong>, with a particular focus on software reliability
+                and testing.
             </p>
             <p>
                 My thesis, advised by Dr. Sadia Sharmin, interprets multilingual speech models for
@@ -412,7 +416,6 @@
             <span class="interest-tag">AI for Software Engineering</span>
             <span class="interest-tag">LLMs for Code</span>
             <span class="interest-tag">Software Reliability &amp; Testing</span>
-            <span class="interest-tag">Configuration &amp; Deployment Correctness</span>
         </div>
     </section>
 
