@@ -222,12 +222,22 @@
         }
 
         /* ── PROJECTS ── */
+        .project-group + .project-group { margin-top: 28px; }
+        .project-group-label {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            letter-spacing: 0.005em;
+        }
         .project-item {
             padding: 20px 0;
         }
         .project-item + .project-item {
             border-top: 1px solid var(--border);
         }
+        .project-group .project-item:first-of-type { padding-top: 12px; }
         .project-name {
             font-weight: 600;
             font-size: 15.5px;
@@ -353,11 +363,11 @@
         <div class="hero-text">
             <h1>Munim Thahmid</h1>
             <p class="subtitle">
-                Final-year CS undergraduate at BUET. Researching at the intersection of
-                high-performance computing and ML systems. Building production voice AI infrastructure.
+                Final-year CS undergraduate at BUET. Working on reliable and secure software
+                systems, AI for software engineering, and LLMs for code.
             </p>
             <div class="hero-links">
-                <a href="mailto:your.email@example.com">
+                <a href="mailto:munimthahmid2@gmail.com">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     Email
                 </a>
@@ -387,26 +397,24 @@
         <div class="about-text">
             <p>
                 I am a final-year Computer Science &amp; Engineering student at Bangladesh University of
-                Engineering and Technology (BUET). My research interests lie in <strong>high-performance
-                computing</strong> and <strong>ML systems</strong> — specifically, profiling and optimizing
-                the runtime performance of machine learning inference pipelines.
+                Engineering and Technology (BUET). My research interests span <strong>reliable and
+                secure software systems</strong>, <strong>AI for software engineering</strong>, and
+                <strong>LLMs for code</strong>, with a particular focus on software reliability,
+                testing, and configuration and deployment correctness.
             </p>
             <p>
-                Alongside my academic work, I have two years of production experience building voice AI
-                and LLM-powered systems as a freelance engineer. I have architected and deployed
-                real-time voice pipelines serving hundreds of daily users, working across the full stack
-                from telephony integration to LLM orchestration.
-            </p>
-            <p>
-                I am seeking PhD positions for Fall 2027 in HPC/ML Systems.
+                My thesis, advised by Dr. Sadia Sharmin, interprets multilingual speech models for
+                Bengali through layer-wise probing across Whisper and XLS-R. Alongside academic work,
+                I spent over a year at Yobo AI building backend systems and testing infrastructure
+                for production AI voice-agent applications.
             </p>
         </div>
         <div class="interests">
-            <span class="interest-tag">HPC / ML Systems</span>
-            <span class="interest-tag">ML Inference Optimization</span>
-            <span class="interest-tag">Voice AI Infrastructure</span>
-            <span class="interest-tag">LLM Systems</span>
-            <span class="interest-tag">Performance Profiling</span>
+            <span class="interest-tag">Reliable &amp; Secure Software Systems</span>
+            <span class="interest-tag">AI for Software Engineering</span>
+            <span class="interest-tag">LLMs for Code</span>
+            <span class="interest-tag">Software Reliability &amp; Testing</span>
+            <span class="interest-tag">Configuration &amp; Deployment Correctness</span>
         </div>
     </section>
 
@@ -416,30 +424,13 @@
 
         <div class="pub-item">
             <div class="pub-title">
-                <a href="#">Your Paper Title Here</a>
+                Interpreting Multilingual Speech Models for Bengali: Cross-Model Probing
+                and Representation-Guided Adaptation
             </div>
             <div class="pub-authors">
-                <strong>Munim Thahmid</strong>, Co-Author Name, Co-Author Name
+                <strong>Munim Thahmid</strong>, Sadia Sharmin
             </div>
-            <div class="pub-venue">Submitted to Interspeech 2026</div>
-            <div class="pub-links">
-                <a href="#">pdf</a>
-                <a href="#">arxiv</a>
-                <a href="#">code</a>
-            </div>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">
-                <a href="#">End-to-End Profiling of Production Voice AI Pipelines</a>
-            </div>
-            <div class="pub-authors">
-                <strong>Munim Thahmid</strong>
-            </div>
-            <div class="pub-venue">In preparation — targeting arXiv preprint, August 2026</div>
-            <div class="pub-links">
-                <a href="#">coming soon</a>
-            </div>
+            <div class="pub-venue">Manuscript in preparation</div>
         </div>
     </section>
 
@@ -447,11 +438,53 @@
     <section id="projects">
         <div class="section-label">Selected Projects</div>
 
+        <div class="project-group">
+        <div class="project-group-label">Research</div>
+
+        <div class="project-item">
+            <div class="project-name">ConfigDiffGuard</div>
+            <div class="project-desc">
+                A Python CLI that compares old and new vLLM configurations and flags risky
+                changes before deployment. Curated 36 configuration-sensitive vLLM GitHub
+                issues into three reliability-oriented failure families, and implemented
+                YAML/JSON parsing, tracked-parameter diffing, 12 warning rules, and scored
+                risk reports — with 5/5 intended evaluation cases passing.
+            </div>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">vLLM</span>
+                <span class="tech-tag">Static Analysis</span>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-name">Bengali Speech Representation Analysis &amp; ASR Adaptation</div>
+            <div class="project-desc">
+                BUET thesis on interpreting Bengali representations in multilingual speech
+                models using FLEURS, Common Voice Bengali, and MMS forced alignment.
+                Layer-wise probing across Whisper and XLS-R showed intermediate layers
+                strongest for Whisper language separation, and XLS-R-300M substantially
+                stronger than tested Whisper variants on Bengali aligned-unit probing,
+                reaching macro-F1 0.6884 in the pilot setup.
+            </div>
+            <div class="project-tech">
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Whisper</span>
+                <span class="tech-tag">XLS-R</span>
+                <span class="tech-tag">FLEURS</span>
+                <span class="tech-tag">MMS</span>
+            </div>
+        </div>
+        </div><!-- /research -->
+
+        <div class="project-group">
+        <div class="project-group-label">Industry</div>
+
         <div class="project-item">
             <div class="project-name"><a href="https://loopz.ai" target="_blank">Loopz.ai ↗</a></div>
             <div class="project-desc">
-                Production voice AI platform with real-time conversational agents. Architected the
-                end-to-end voice pipeline, LLM integration, and telephony infrastructure.
+                Production voice AI platform with real-time conversational agents. Architected
+                the end-to-end voice pipeline, LLM integration, and telephony infrastructure.
             </div>
             <div class="project-tech">
                 <span class="tech-tag">Vapi</span>
@@ -480,8 +513,8 @@
         <div class="project-item">
             <div class="project-name"><a href="https://phoneline.helloyobo.com" target="_blank">HelloYobo Phoneline ↗</a></div>
             <div class="project-desc">
-                Voice AI phone system for automated customer interactions. Designed the call routing
-                logic, speech pipeline, and conversation state management.
+                Voice AI phone system for automated customer interactions. Designed the call
+                routing logic, speech pipeline, and conversation state management.
             </div>
             <div class="project-tech">
                 <span class="tech-tag">Vapi</span>
@@ -489,6 +522,7 @@
                 <span class="tech-tag">Deepgram</span>
             </div>
         </div>
+        </div><!-- /industry -->
     </section>
 
     <!-- ── EXPERIENCE ── -->
@@ -497,28 +531,28 @@
 
         <div class="exp-item">
             <div class="exp-header">
-                <span class="exp-role">Freelance Voice AI & LLM Engineer</span>
-                <span class="exp-date">2024 — present</span>
+                <span class="exp-role">Software Engineer Intern &rarr; Software Engineer (Part-time)</span>
+                <span class="exp-date">Oct 2024 — Feb 2026</span>
             </div>
-            <div class="exp-org">Upwork — Multiple Clients</div>
+            <div class="exp-org">Yobo AI — Remote</div>
             <div class="exp-desc">
-                Design and deploy production voice AI systems and LLM-powered backends for SaaS
-                clients. Work spans real-time voice pipelines, telephony integration, billing
-                infrastructure, and full-stack application development. Multiple live deployments
-                serving daily users.
+                Built backend systems, testing infrastructure, and production features for AI
+                voice-agent applications. Developed an automated Python testing platform that
+                reduced regression cycles from 8 hours to 15 minutes, enabling faster and more
+                reliable deployment.
             </div>
         </div>
 
         <div class="exp-item">
             <div class="exp-header">
-                <span class="exp-role">Undergraduate Researcher</span>
+                <span class="exp-role">Undergraduate Thesis Researcher</span>
                 <span class="exp-date">2025 — present</span>
             </div>
-            <div class="exp-org">BUET — Dept. of Computer Science & Engineering</div>
+            <div class="exp-org">BUET — Dept. of Computer Science &amp; Engineering</div>
             <div class="exp-desc">
-                Thesis research on profiling and optimizing ML inference pipelines. Investigating
-                end-to-end latency characteristics of production voice AI systems to identify
-                computational bottlenecks.
+                Thesis on interpreting multilingual speech models for Bengali, advised by
+                Dr. Sadia Sharmin. Cross-model probing across Whisper and XLS-R, with
+                representation-guided adaptation for low-resource ASR.
             </div>
         </div>
     </section>
@@ -528,9 +562,9 @@
         <div class="section-label">Education</div>
 
         <div class="edu-item">
-            <div class="edu-degree">B.Sc. in Computer Science & Engineering</div>
+            <div class="edu-degree">B.Sc. in Computer Science &amp; Engineering</div>
             <div class="edu-school">Bangladesh University of Engineering and Technology (BUET)</div>
-            <div class="edu-details">Expected 2026</div>
+            <div class="edu-details">Jan 2022 — May 2026</div>
         </div>
     </section>
 
