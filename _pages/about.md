@@ -8,32 +8,32 @@ redirect_from:
   - /about.html
 ---
 
-I'm a third-year undergraduate student at BUET.
+I am a final-year Computer Science & Engineering student at Bangladesh University of Engineering and Technology (BUET).
 
 ## About Me
 
-🎓 **Education**: Currently pursuing my undergraduate degree at BUET.
+My research interests are in reliable and secure software systems, with a focus on agentic SRE, production failure analysis, software reliability, and the safety/security challenges of AI-assisted software operations.
 
-🔍 **Research Interests**: I'm passionate about Language Models (LLMs), Code Generation Models, and exploring the intersection of technology and human language.
+I am currently a Summer Research Intern at the University of Illinois Urbana-Champaign, advised by Prof. Tianyin Xu, where I work on the safety and reliability of agentic SRE systems. My current work studies real-world production failures and how they can be characterized, reproduced, and used to evaluate AI agents for systems diagnosis and recovery.
 
-🌐 **Interest in Web Development**: Alongside my academic pursuits, I have a keen interest in web development and enjoy creating engaging online experiences.
+I am also interested in AI-agent security and systems security, especially in settings where agents interact with tools, code, infrastructure, user data, and operational environments. More broadly, I want to build and evaluate AI-operated software systems that are reliable, secure, and safe in practice.
 
-🛠️ **Skills**: I'm proficient in unit testing, problem solving, JavaScript, Django, and more.
+Previously, my undergraduate thesis, advised by Dr. Sadia Sharmin, studied multilingual speech models for Bengali through layer-wise probing across Whisper and XLS-R. This work gave me experience in model interpretation, probing-based evaluation, and low-resource ML analysis.
 
-🌟 **Interest in Open Source Contribution**: I'm excited to dive into the world of open source contribution soon. I believe in the power of collaboration and am eager to contribute to projects that align with my interests and expertise.
+Alongside academic work, I spent over a year at Yobo AI building backend systems, testing infrastructure, and production features for AI voice-agent applications.
 
 ---
 
 ## Selected Experience
 
-### 🤖 Open Source Contributions
+### Summer Research Intern
 
-While I haven't made any contributions yet, I'm actively exploring opportunities to get involved in open source projects. Stay tuned for updates on my journey into open source contribution!
+University of Illinois Urbana-Champaign, Summer 2026. Advised by Prof. Tianyin Xu.
 
-### 👨🏻‍🔬 Professional Experience
+### Software Engineer Intern / Software Engineer (Part-time)
 
-Currently, I don't have any specific professional experience or internships to highlight.
+Yobo AI, Oct 2024 - Feb 2026. Built backend systems, testing infrastructure, and production features for AI voice-agent applications.
 
-### 📚 Teaching and Community Contributions
+### Undergraduate Thesis Researcher
 
-At the moment, I'm not actively involved in teaching or community contributions.
+BUET, 2025 - present. Advised by Dr. Sadia Sharmin; studied multilingual speech models for Bengali through layer-wise probing across Whisper and XLS-R.
