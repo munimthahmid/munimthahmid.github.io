@@ -1,12 +1,30 @@
 
-# Academic Pages
+# Munim Thahmid - Research Portfolio
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+Personal research website for [Munim Thahmid](https://munimthahmid.github.io), focused on formal methods, AI-assisted reasoning, and dependable software systems.
+
+The homepage is a self-contained, responsive HTML document. Legacy content pages continue to use the Academic Pages Jekyll theme.
+
+## Local preview
+
+The homepage can be previewed with any static server:
+
+```bash
+python3 -m http.server 4000
+```
+
+Then open `http://localhost:4000`.
+
+For Jekyll-backed content pages, use `bundle exec jekyll serve` after installing the dependencies in `Gemfile`.
+
+---
+
+## Theme attribution
 
 Academic Pages is a Github Pages template for academic websites.
 
 
-# Getting Started
+### Academic Pages documentation
 
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
 1. Click the "Use this template" button in the top right.

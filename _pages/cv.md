@@ -1,64 +1,54 @@
 ---
-layout: archive
-title: "CV"
+layout: single
+title: "Resume"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Download the PDF version](/files/Munim_Thahmid_Resume.pdf){: .btn .btn--primary }
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Research interests
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+Formal methods; TLA+ and TLAPS; AI-assisted theorem proving; dependable distributed systems; software reliability; agentic SRE.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Education
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+**Bangladesh University of Engineering and Technology (BUET)** - Dhaka, Bangladesh<br>
+B.Sc. in Computer Science and Engineering, 2026
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Research experience
+
+### Research Intern - University of Illinois Urbana-Champaign
+
+**May 2026 - Present** | Advisor: Prof. Tianyin Xu
+
+- Contribute to TLAPS-Bench, an evaluation framework for AI-generated TLA+ proofs.
+- Added cache-aware and sharded TLAPM verification for large proof artifacts and reliability features for long-running model evaluations.
+- Developed a reproducible SREGym failure scenario for Kubernetes node conntrack exhaustion.
+
+### Undergraduate Researcher - BUET
+
+**2025 - 2026** | Supervisor: Dr. Sadia Sharmin
+
+- Studied Bengali phone-like representations across Whisper encoders under speaker-disjoint evaluation.
+- Conducted cross-model comparison with XLS-R and robustness analyses, leading to an accepted INTERSPEECH 2026 paper.
+
+## Engineering experience
+
+### Software Engineer - Yobo AI
+
+**October 2024 - February 2026** | Intern, then part-time engineer
+
+- Built backend systems, testing infrastructure, and production features for AI voice-agent applications.
+- Developed automation that reduced a regression cycle from roughly eight hours to fifteen minutes.
+
+## Publication
+
+**Layer-wise Probing of Whisper's Encoder Representations for Bengali Phone-like Units.**<br>
+Munim Thahmid and Sadia Sharmin. Accepted to INTERSPEECH 2026.
+
+## Technical skills
+
+TLA+, TLAPS/TLAPM, Python, C/C++, TypeScript/JavaScript, Bash, Linux, Docker, Kubernetes, Git, PyTorch, scikit-learn, pandas, NumPy.
