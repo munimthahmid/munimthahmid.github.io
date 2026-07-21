@@ -24,9 +24,9 @@ B.Sc. in Computer Science and Engineering, 2026
 
 **May 2026 - Present** | Advisor: Prof. Tianyin Xu
 
-- Contribute to TLAPS-Bench, an evaluation framework for AI-generated TLA+ proofs.
-- Added cache-aware and sharded TLAPM verification for large proof artifacts and reliability features for long-running model evaluations.
-- Developed a reproducible SREGym failure scenario for Kubernetes node conntrack exhaustion.
+- Contribute to TLAPS-Bench, a benchmark for evaluating AI systems on machine-checkable TLA+ proofs.
+- Work on rigorous evaluation methodology, scalable proof verification, and reliable multi-round experiments.
+- Previously developed a reproducible SREGym failure scenario for Kubernetes node conntrack exhaustion.
 
 ### Undergraduate Researcher - BUET
 
