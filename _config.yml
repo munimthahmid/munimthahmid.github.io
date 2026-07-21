@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale: "en-US"
-title: "Munim's Homepage"
+title: "Munim Thahmid"
 title_separator: "-"
 name: &name "Munim Thahmid"
-description: &description "personal description"
+description: &description "Software systems researcher working on formal methods, AI-assisted reasoning, and dependable systems."
 url: https://munimthahmid.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "munimthahmid/munimthahmid.github.io"
@@ -24,9 +24,9 @@ author:
   avatar: "munim-thahmid.jpg"
   name: "Munim Thahmid"
   pronouns: # example: "she/her"
-  bio: "Final-year CSE student at BUET; Summer Research Intern at UIUC working on agentic SRE reliability and safety."
-  location: "Dhaka,Bangladesh"
-  employer: "Bangladesh University of Engineering & Technology"
+  bio: "Recent BUET CSE graduate and UIUC research intern working on formal methods and dependable software systems."
+  location: "Dhaka, Bangladesh"
+  employer: "University of Illinois Urbana-Champaign"
   uri: # URL
   email: "munimthahmid2@gmail.com"
 
@@ -56,7 +56,7 @@ author:
   keybase: # Username
   instagram: # Username
   lastfm: # Username
-  linkedin: munim-thahmid
+  linkedin: munimthahmid
   mastodon: # URL
   medium: # URL
   pinterest: # Username
@@ -64,7 +64,7 @@ author:
   steam: # Username
   telegram: # URL
   tumblr: # Username
-  twitter: "MunimThahm81566" # Replace this with your X / Twitter handle
+  twitter: # Username
   vine: # Username
   weibo: # Username
   wikipedia: # Username
@@ -76,7 +76,7 @@ author:
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs: false # true, false (default)
 words_per_minute: 160
-future: true
+future: false
 read_more: "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link: false #change to true to add link to talkmap on talks page
 comments:
@@ -132,7 +132,7 @@ social:
 
 # Analytics
 analytics:
-  provider: "google-universal" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider: false # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id:
 
@@ -165,6 +165,29 @@ exclude:
   - package.json
   - tmp
   - vendor
+  # Retired Academic Pages demo content. Keep the source in git history, but do
+  # not publish placeholder posts, talks, teaching entries, or archive pages.
+  - _posts
+  - _talks
+  - _teaching
+  - _portfolio
+  - _projects
+  - _drafts
+  - markdown_generator
+  - talkmap
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
 keep_files:
   - .git
   - .svn
@@ -192,19 +215,19 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
   projects:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 # Defaults

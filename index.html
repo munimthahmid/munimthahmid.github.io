@@ -1,613 +1,1120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munim Thahmid — Researcher & Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #fafaf8;
-            --text: #1a1a1a;
-            --text-secondary: #555;
-            --text-tertiary: #888;
-            --accent: #1a4d8f;
-            --accent-hover: #0f3766;
-            --border: #e0ddd8;
-            --card-bg: #ffffff;
-            --tag-bg: #f0eeea;
-            --serif: 'Source Serif 4', Georgia, serif;
-            --sans: 'IBM Plex Sans', -apple-system, sans-serif;
-            --mono: 'IBM Plex Mono', monospace;
-            --max-width: 720px;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2926">
+  <meta name="description" content="Munim Thahmid is a software systems researcher working on formal methods, AI-assisted reasoning, and dependable systems.">
+  <meta property="og:title" content="Munim Thahmid - Formal Methods &amp; Software Systems">
+  <meta property="og:description" content="Research in formal methods, AI-assisted theorem proving, and dependable software systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://munimthahmid.github.io">
+  <meta property="og:image" content="https://munimthahmid.github.io/profile.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Munim Thahmid - Formal Methods &amp; Software Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Munim Thahmid",
+    "url": "https://munimthahmid.github.io",
+    "image": "https://munimthahmid.github.io/profile.png",
+    "email": "mailto:munimthahmid2@gmail.com",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Bangladesh University of Engineering and Technology"
+    },
+    "sameAs": [
+      "https://github.com/munimthahmid",
+      "https://www.linkedin.com/in/munimthahmid/"
+    ],
+    "knowsAbout": ["Formal methods", "TLA+", "TLAPS", "Software systems", "Distributed systems", "AI-assisted reasoning"]
+  }
+  </script>
 
-        body {
-            font-family: var(--sans);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            font-size: 15.5px;
-            -webkit-font-smoothing: antialiased;
-        }
+  <style>
+    :root {
+      --ink: #102522;
+      --muted: #5e6e6a;
+      --paper: #f7f4ed;
+      --paper-deep: #eee9de;
+      --card: #fffdf8;
+      --line: rgba(16, 37, 34, 0.14);
+      --green: #0f675d;
+      --green-dark: #0b2926;
+      --green-soft: #d9ebe5;
+      --amber: #f1a94e;
+      --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: "Newsreader", Georgia, serif;
+      --mono: "DM Mono", "SFMono-Regular", Consolas, monospace;
+      --content: 1160px;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --shadow: 0 24px 70px rgba(24, 45, 40, 0.1);
+    }
 
-        /* ── NAV ── */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(250, 250, 248, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-        nav .nav-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 54px;
-        }
-        nav .nav-name {
-            font-family: var(--serif);
-            font-weight: 600;
-            font-size: 17px;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-        nav .nav-links { display: flex; gap: 28px; }
-        nav .nav-links a {
-            font-size: 13.5px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-            letter-spacing: 0.01em;
-        }
-        nav .nav-links a:hover { color: var(--text); }
+    *, *::before, *::after { box-sizing: border-box; }
 
-        /* ── LAYOUT ── */
-        main {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
-        section { padding: 56px 0; }
-        section + section { border-top: 1px solid var(--border); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 80% 5%, rgba(241, 169, 78, 0.13), transparent 22rem),
+        radial-gradient(circle at 8% 32%, rgba(15, 103, 93, 0.09), transparent 28rem),
+        var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .section-label {
-            font-size: 11.5px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-tertiary);
-            margin-bottom: 24px;
-        }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; }
+    ::selection { color: var(--green-dark); background: #cfe8df; }
 
-        /* ── HERO ── */
-        .hero {
-            padding: 64px 0 56px;
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
-        .hero-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            background: var(--border);
-            border: 3px solid var(--border);
-            overflow: hidden;
-            position: relative;
-        }
-        .hero-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .hero-text h1 {
-            font-family: var(--serif);
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-        }
-        .hero-text .subtitle {
-            font-size: 15.5px;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-        .hero-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .hero-links a {
-            font-size: 13.5px;
-            font-weight: 500;
-            color: var(--accent);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.2s;
-        }
-        .hero-links a:hover { color: var(--accent-hover); text-decoration: underline; }
-        .hero-links a svg { width: 14px; height: 14px; }
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      transform: translateY(-150%);
+      padding: 10px 14px;
+      color: white;
+      background: var(--green-dark);
+      border-radius: 10px;
+    }
 
-        /* ── ABOUT ── */
-        .about-text {
-            font-size: 15.5px;
-            color: var(--text);
-            line-height: 1.8;
-        }
-        .about-text p + p { margin-top: 14px; }
+    .skip-link:focus { transform: translateY(0); }
 
-        /* ── RESEARCH INTERESTS ── */
-        .interests {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-        }
-        .interest-tag {
-            font-size: 13px;
-            font-weight: 500;
-            padding: 5px 14px;
-            border-radius: 20px;
-            background: var(--tag-bg);
-            color: var(--text-secondary);
-            letter-spacing: 0.01em;
-        }
+    .shell {
+      width: min(calc(100% - 40px), var(--content));
+      margin: 0 auto;
+    }
 
-        /* ── PUBLICATIONS ── */
-        .pub-item {
-            padding: 20px 0;
-        }
-        .pub-item + .pub-item {
-            border-top: 1px solid var(--border);
-        }
-        .pub-title {
-            font-family: var(--serif);
-            font-size: 16.5px;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 6px;
-            color: var(--text);
-        }
-        .pub-title a {
-            color: var(--text);
-            text-decoration: none;
-        }
-        .pub-title a:hover { color: var(--accent); }
-        .pub-authors {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 4px;
-        }
-        .pub-authors strong { font-weight: 600; color: var(--text); }
-        .pub-venue {
-            font-size: 13.5px;
-            color: var(--text-tertiary);
-            font-style: italic;
-        }
-        .pub-links {
-            margin-top: 8px;
-            display: flex;
-            gap: 16px;
-        }
-        .pub-links a {
-            font-size: 12.5px;
-            font-weight: 500;
-            font-family: var(--mono);
-            color: var(--accent);
-            text-decoration: none;
-            padding: 3px 10px;
-            border: 1px solid var(--accent);
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        .pub-links a:hover {
-            background: var(--accent);
-            color: #fff;
-        }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 0;
+    }
 
-        /* ── PROJECTS ── */
-        .project-group + .project-group { margin-top: 28px; }
-        .project-group-label {
-            font-family: var(--serif);
-            font-style: italic;
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 4px;
-            letter-spacing: 0.005em;
-        }
-        .project-item {
-            padding: 20px 0;
-        }
-        .project-item + .project-item {
-            border-top: 1px solid var(--border);
-        }
-        .project-group .project-item:first-of-type { padding-top: 12px; }
-        .project-name {
-            font-weight: 600;
-            font-size: 15.5px;
-            margin-bottom: 4px;
-        }
-        .project-name a {
-            color: var(--text);
-            text-decoration: none;
-        }
-        .project-name a:hover { color: var(--accent); }
-        .project-desc {
-            font-size: 14.5px;
-            color: var(--text-secondary);
-            line-height: 1.65;
-            margin-bottom: 8px;
-        }
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .tech-tag {
-            font-size: 11.5px;
-            font-family: var(--mono);
-            font-weight: 400;
-            padding: 2px 8px;
-            border-radius: 3px;
-            background: var(--tag-bg);
-            color: var(--text-tertiary);
-        }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      padding: 8px 10px 8px 18px;
+      background: rgba(255, 253, 248, 0.84);
+      border: 1px solid rgba(16, 37, 34, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(26, 48, 43, 0.06);
+      backdrop-filter: blur(18px);
+    }
 
-        /* ── EXPERIENCE ── */
-        .exp-item { padding: 20px 0; }
-        .exp-item + .exp-item { border-top: 1px solid var(--border); }
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .exp-role {
-            font-weight: 600;
-            font-size: 15.5px;
-        }
-        .exp-date {
-            font-size: 13px;
-            color: var(--text-tertiary);
-            font-family: var(--mono);
-            white-space: nowrap;
-        }
-        .exp-org {
-            font-size: 14.5px;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
-        }
-        .exp-desc {
-            font-size: 14.5px;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+    }
 
-        /* ── EDUCATION ── */
-        .edu-item { padding: 16px 0; }
-        .edu-item + .edu-item { border-top: 1px solid var(--border); }
-        .edu-degree { font-weight: 600; font-size: 15.5px; margin-bottom: 2px; }
-        .edu-school { font-size: 14.5px; color: var(--text-secondary); }
-        .edu-details { font-size: 13.5px; color: var(--text-tertiary); margin-top: 2px; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      color: white;
+      background: var(--green-dark);
+      border-radius: 10px;
+      font-family: var(--serif);
+      font-size: 18px;
+    }
 
-        /* ── FOOTER ── */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-        }
-        footer p {
-            font-size: 13px;
-            color: var(--text-tertiary);
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-        /* ── RESPONSIVE ── */
-        @media (max-width: 600px) {
-            .hero { flex-direction: column; gap: 24px; padding: 40px 0 40px; }
-            .hero-photo { width: 96px; height: 96px; font-size: 32px; }
-            .hero-text h1 { font-size: 25px; }
-            section { padding: 40px 0; }
-            nav .nav-links { gap: 18px; }
-            nav .nav-links a { font-size: 13px; }
-            .exp-header { flex-direction: column; gap: 2px; }
-        }
+    .nav-links a {
+      padding: 9px 12px;
+      color: var(--muted);
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 160ms ease, background 160ms ease;
+    }
 
-        /* ── PRINT ── */
-        @media print {
-            nav { display: none; }
-            section { padding: 24px 0; }
-        }
-    </style>
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--ink);
+      background: var(--paper-deep);
+      outline: none;
+    }
+
+    .nav-links .resume-link {
+      margin-left: 5px;
+      color: white;
+      background: var(--green-dark);
+    }
+
+    .nav-links .resume-link:hover,
+    .nav-links .resume-link:focus-visible {
+      color: white;
+      background: var(--green);
+    }
+
+    .menu-button {
+      display: none;
+      width: 42px;
+      height: 42px;
+      color: var(--ink);
+      background: transparent;
+      border: 0;
+      border-radius: 11px;
+      cursor: pointer;
+    }
+
+    .menu-button svg { width: 22px; }
+
+    main { overflow: clip; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+      gap: clamp(46px, 7vw, 92px);
+      align-items: center;
+      min-height: calc(100vh - 90px);
+      padding: 74px 0 94px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 2px;
+      background: var(--amber);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 25px;
+      font-family: var(--serif);
+      font-size: clamp(56px, 7.5vw, 96px);
+      font-weight: 600;
+      line-height: 0.93;
+      letter-spacing: -0.055em;
+    }
+
+    h1 em {
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    .hero-lede {
+      max-width: 650px;
+      margin-bottom: 29px;
+      color: #40534f;
+      font-size: clamp(17px, 2vw, 20px);
+      line-height: 1.72;
+    }
+
+    .hero-lede strong { color: var(--ink); font-weight: 700; }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid var(--green-dark);
+      border-radius: 13px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .button svg { width: 17px; height: 17px; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: white; background: var(--green-dark); }
+    .button-primary:hover { background: var(--green); }
+    .button-secondary { background: transparent; }
+    .button-secondary:hover { color: white; background: var(--green-dark); }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 21px;
+    }
+
+    .social-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .social-row a:hover { color: var(--green); }
+    .social-row svg { width: 16px; height: 16px; }
+
+    .portrait-stage {
+      position: relative;
+      max-width: 430px;
+      justify-self: end;
+      padding: 22px 0 28px 22px;
+    }
+
+    .portrait-stage::before {
+      content: "";
+      position: absolute;
+      inset: 0 28px 0 0;
+      background: var(--green-dark);
+      border-radius: 48% 52% 36% 64% / 38% 42% 58% 62%;
+      transform: rotate(-4deg);
+    }
+
+    .portrait {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 8px solid var(--card);
+      border-radius: 190px 190px 34px 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 51% 58%;
+      transform: scale(1.04);
+    }
+
+    .focus-card {
+      position: absolute;
+      right: -22px;
+      bottom: 0;
+      z-index: 2;
+      width: min(310px, 86%);
+      padding: 19px 21px;
+      color: white;
+      background: rgba(15, 103, 93, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 17px;
+      box-shadow: 0 22px 50px rgba(10, 50, 44, 0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    .focus-card span {
+      display: block;
+      margin-bottom: 6px;
+      color: #bfe5da;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .focus-card strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.18;
+    }
+
+    .proof-chip {
+      position: absolute;
+      top: 46px;
+      left: -26px;
+      z-index: 2;
+      padding: 12px 15px;
+      color: var(--green-dark);
+      background: var(--amber);
+      border: 5px solid var(--paper);
+      border-radius: 13px;
+      font-family: var(--mono);
+      font-size: 11px;
+      box-shadow: 0 16px 35px rgba(74, 50, 15, 0.16);
+      transform: rotate(-4deg);
+    }
+
+    .signal-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 116px;
+      overflow: hidden;
+      color: white;
+      background: var(--green-dark);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .signal {
+      position: relative;
+      padding: 30px clamp(24px, 3.4vw, 42px);
+    }
+
+    .signal + .signal { border-left: 1px solid rgba(255, 255, 255, 0.14); }
+
+    .signal strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--amber);
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 43px);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .signal span {
+      color: #c4d2ce;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .section { padding: 0 0 120px; }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 50px;
+    }
+
+    .section-index {
+      margin-bottom: 11px;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: clamp(40px, 5.5vw, 62px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-intro {
+      max-width: 590px;
+      justify-self: end;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .research-card {
+      position: relative;
+      min-height: 310px;
+      padding: clamp(28px, 4vw, 43px);
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 14px 45px rgba(28, 45, 41, 0.05);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 60px rgba(28, 45, 41, 0.1);
+    }
+
+    .research-card.primary {
+      min-height: 410px;
+      color: white;
+      background: var(--green-dark);
+      border: 0;
+    }
+
+    .research-card.primary::after {
+      content: "QED";
+      position: absolute;
+      right: -10px;
+      bottom: -48px;
+      color: rgba(255, 255, 255, 0.045);
+      font-family: var(--serif);
+      font-size: 190px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .research-card.wide { grid-column: 1 / -1; min-height: 0; }
+
+    .card-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 63px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .primary .card-kicker { color: #a9c8c0; }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 9px;
+      color: var(--green);
+      background: var(--green-soft);
+      border-radius: 999px;
+      font-size: 9px;
+    }
+
+    .status-pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: currentColor;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(15, 103, 93, 0.12);
+    }
+
+    .primary .status-pill {
+      color: #bceadc;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .research-card h3 {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      margin-bottom: 15px;
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .research-card:not(.primary) h3 { font-size: clamp(25px, 3vw, 34px); }
+
+    .research-card p {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .primary p { max-width: 660px; color: #bdd0cb; }
+
+    .card-link {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .primary .card-link { color: var(--amber); }
+    .card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    .wide-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: clamp(30px, 5vw, 72px);
+      align-items: end;
+    }
+
+    .wide-layout .card-kicker { margin-bottom: 24px; }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 128px 1fr;
+      gap: clamp(25px, 5vw, 70px);
+      padding: clamp(30px, 5vw, 56px);
+      background: #eadfc9;
+      border-radius: var(--radius-lg);
+    }
+
+    .pub-year {
+      color: var(--green-dark);
+      font-family: var(--serif);
+      font-size: 52px;
+      line-height: 1;
+    }
+
+    .pub-year small {
+      display: block;
+      margin-top: 10px;
+      color: #68736c;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .publication h3 {
+      max-width: 800px;
+      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-size: clamp(27px, 4vw, 41px);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+    }
+
+    .publication p { margin-bottom: 9px; color: #52615b; }
+    .publication .authors { color: var(--ink); font-weight: 600; }
+    .venue-badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 7px 11px;
+      color: white;
+      background: var(--green);
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      gap: 38px;
+      padding: 35px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-date {
+      padding-top: 4px;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+    }
+
+    .timeline-content {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: clamp(25px, 5vw, 70px);
+    }
+
+    .timeline-content h3 {
+      margin-bottom: 5px;
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .timeline-content .org {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .timeline-content .description { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .about-panel {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .about-copy,
+    .education-card {
+      padding: clamp(30px, 5vw, 52px);
+      border-radius: var(--radius-lg);
+    }
+
+    .about-copy { color: white; background: var(--green); }
+
+    .about-copy h2 {
+      max-width: 550px;
+      margin-bottom: 28px;
+      font-size: clamp(38px, 5vw, 56px);
+    }
+
+    .about-copy p { max-width: 640px; color: #d4e5e1; }
+
+    .education-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 410px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .education-card .mono-label {
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .education-card h3 {
+      margin-bottom: 11px;
+      font-family: var(--serif);
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .education-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 7px 10px;
+      color: #d6e9e4;
+      background: rgba(7, 47, 42, 0.27);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(45px, 7vw, 80px);
+      color: white;
+      background: var(--green-dark);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+
+    .contact::before,
+    .contact::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .contact::before { top: -130px; left: -70px; }
+    .contact::after { right: -90px; bottom: -160px; }
+
+    .contact .section-index { color: var(--amber); }
+    .contact h2 { position: relative; max-width: 680px; margin: 0 auto 20px; }
+    .contact p { position: relative; max-width: 590px; margin: 0 auto 30px; color: #bdceca; }
+    .contact .button { position: relative; color: var(--green-dark); background: var(--amber); border-color: var(--amber); }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 34px 0 50px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer .footer-links { display: flex; gap: 18px; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--green); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 920px) {
+      .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 65px; }
+      .hero-copy { max-width: 790px; }
+      .portrait-stage { width: min(80%, 440px); justify-self: center; margin-top: 10px; }
+      .research-grid { grid-template-columns: 1fr; }
+      .research-card.wide { grid-column: auto; }
+      .section-heading { grid-template-columns: 1fr; gap: 20px; }
+      .section-intro { justify-self: start; }
+      .timeline-content { grid-template-columns: 1fr; gap: 15px; }
+      .about-panel { grid-template-columns: 1fr; }
+      .education-card { min-height: 320px; }
+    }
+
+    @media (max-width: 720px) {
+      .shell { width: min(calc(100% - 28px), var(--content)); }
+      .site-header { padding: 10px 0; }
+      .nav { position: relative; padding-left: 12px; }
+      .menu-button { display: grid; place-items: center; }
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        padding: 9px;
+        background: rgba(255, 253, 248, 0.98);
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: grid; }
+      .nav-links a { padding: 12px; }
+      .nav-links .resume-link { margin: 3px 0 0; text-align: center; }
+      .hero { padding: 54px 0 80px; gap: 46px; }
+      h1 { font-size: clamp(52px, 16vw, 72px); }
+      .portrait-stage { width: 88%; padding-left: 9px; }
+      .proof-chip { left: -12px; }
+      .focus-card { right: -11px; }
+      .signal-strip { grid-template-columns: 1fr; margin-bottom: 90px; }
+      .signal + .signal { border-top: 1px solid rgba(255, 255, 255, 0.14); border-left: 0; }
+      .signal { display: grid; grid-template-columns: 95px 1fr; align-items: center; }
+      .section { padding-bottom: 90px; }
+      .card-kicker { margin-bottom: 42px; }
+      .wide-layout { grid-template-columns: 1fr; }
+      .publication { grid-template-columns: 1fr; gap: 25px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 12px; padding: 30px 0; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media print {
+      .site-header, .proof-chip, .focus-card, .button-row, .social-row { display: none; }
+      body { background: white; }
+      .hero { min-height: 0; padding: 30px 0; }
+      .section { padding-bottom: 45px; }
+      .research-card, .signal-strip, .contact { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
-    <div class="nav-inner">
-        <a href="#" class="nav-name">Home</a>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Munim Thahmid, home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Munim Thahmid</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publication">Publication</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a class="resume-link" href="/files/Munim_Thahmid_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="shell" id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Formal methods x software systems</p>
+          <h1 id="hero-title">Making complex systems <em>easier to trust.</em></h1>
+          <p class="hero-lede">
+            I am <strong>Munim Thahmid</strong>, a recent BUET CSE graduate and research intern at UIUC, advised by Prof. Tianyin Xu. I work at the intersection of formal methods, AI-assisted reasoning, and dependable software systems.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="#research">
+              Explore my research
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a class="button button-secondary" href="/files/Munim_Thahmid_Resume.pdf" target="_blank" rel="noopener">
+              View resume
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+            </a>
+          </div>
+          <div class="social-row" role="group" aria-label="External profiles">
+            <a href="mailto:munimthahmid2@gmail.com">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Email
+            </a>
+            <a href="https://github.com/munimthahmid" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/munimthahmid/" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
         </div>
+
+        <div class="portrait-stage">
+          <div class="proof-chip" aria-hidden="true">Safety == []Invariant</div>
+          <div class="portrait"><img src="profile.png" alt="Munim Thahmid"></div>
+          <div class="focus-card">
+            <span>Current focus</span>
+            <strong>Evaluation and verification infrastructure for TLAPS-Bench</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-strip reveal" aria-label="Profile highlights">
+        <div class="signal"><strong>7</strong><span>merged contributions to TLAPS-Bench</span></div>
+        <div class="signal"><strong>1</strong><span>accepted INTERSPEECH publication</span></div>
+        <div class="signal"><strong>1+ yr</strong><span>building production AI systems</span></div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index">01 / Selected research</p>
+            <h2 id="research-title">Work grounded in real systems.</h2>
+          </div>
+          <p class="section-intro">My current direction connects rigorous reasoning with the messy reality of production software: proofs must scale, benchmarks must be trustworthy, and failures must be represented faithfully.</p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card primary reveal">
+            <div class="card-kicker">
+              <span>Formal methods / active</span>
+              <span class="status-pill">Current</span>
+            </div>
+            <h3>TLAPS-Bench: evaluating AI-generated TLA+ proofs</h3>
+            <p>Contributing benchmark and evaluator infrastructure for machine-assisted formal reasoning. My work includes cache-aware and sharded TLAPM verification for large proofs, continuation and failure-recovery strategies, resume correctness, and model execution controls.</p>
+            <a class="card-link" href="https://github.com/specula-org/tlaps-bench/pulls?q=is%3Apr+author%3Amunimthahmid" target="_blank" rel="noopener">See contributions <span aria-hidden="true">&nearr;</span></a>
+          </article>
+
+          <article class="research-card reveal">
+            <div class="card-kicker">
+              <span>Dependable systems</span>
+              <span class="status-pill">UIUC</span>
+            </div>
+            <h3>Real-world failures for agentic SRE</h3>
+            <p>Studying how AI agents diagnose and recover from production failures safely. I built a reproducible SREGym scenario for Kubernetes node conntrack exhaustion, including setup, observability, and oracle logic.</p>
+          </article>
+
+          <article class="research-card wide reveal">
+            <div class="wide-layout">
+              <div>
+                <div class="card-kicker"><span>Speech representations</span></div>
+                <h3>What do multilingual speech encoders learn about Bengali?</h3>
+              </div>
+              <div>
+                <p>My undergraduate research used speaker-disjoint, layer-wise probing to study Bengali phone-like units across Whisper variants, with XLS-R comparison and robustness analyses. This work was accepted to INTERSPEECH 2026.</p>
+                <a class="card-link" href="#publication">Read publication details <span aria-hidden="true">&darr;</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="publication" aria-labelledby="publication-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index">02 / Publication</p>
+            <h2 id="publication-title">Peer-reviewed work.</h2>
+          </div>
+          <p class="section-intro">An empirical study of where Bengali phone-like information emerges inside multilingual speech encoders.</p>
+        </div>
+
+        <article class="publication reveal">
+          <div class="pub-year">2026<small>INTERSPEECH</small></div>
+          <div>
+            <h3>Layer-wise Probing of Whisper's Encoder Representations for Bengali Phone-like Units</h3>
+            <p class="authors">Munim Thahmid and Sadia Sharmin</p>
+            <p>Speaker-disjoint probing across Whisper-small, Whisper-medium, and Whisper-large-v3, with cross-model comparison and robustness analyses.</p>
+            <span class="venue-badge">Accepted paper</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index">03 / Experience</p>
+            <h2 id="experience-title">Research informed by engineering.</h2>
+          </div>
+          <p class="section-intro">I have worked across formal-methods tooling, systems benchmarks, speech research, and production voice-agent infrastructure.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">MAY 2026 - PRESENT</div>
+            <div class="timeline-content">
+              <div>
+                <h3>Research Intern</h3>
+                <p class="org">University of Illinois Urbana-Champaign<br>Advisor: Prof. Tianyin Xu</p>
+              </div>
+              <p class="description">Working on formal reasoning and dependable systems, with contributions to TLAPS-Bench and research on safe, reliable agentic SRE grounded in real production failures.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">OCT 2024 - FEB 2026</div>
+            <div class="timeline-content">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="org">Yobo AI<br>Intern, then part-time engineer</p>
+              </div>
+              <p class="description">Built backend systems, testing infrastructure, and production features for AI voice-agent applications. Developed automation that reduced a regression cycle from roughly eight hours to fifteen minutes.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2025 - 2026</div>
+            <div class="timeline-content">
+              <div>
+                <h3>Undergraduate Researcher</h3>
+                <p class="org">Bangladesh University of Engineering and Technology<br>Supervisor: Dr. Sadia Sharmin</p>
+              </div>
+              <p class="description">Investigated multilingual speech representations for Bengali through layer-wise probing, cross-model evaluation, and robustness analysis, leading to an accepted INTERSPEECH 2026 paper.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="about-panel reveal">
+          <div class="about-copy">
+            <p class="section-index">04 / About</p>
+            <h2 id="about-title">A systems researcher who likes evidence.</h2>
+            <p>I am interested in formal verification for distributed and production systems, especially where machine-assisted reasoning can make rigorous methods more usable without weakening their guarantees.</p>
+            <p>My engineering background keeps me focused on the details that determine whether research artifacts actually work: reproducible setup, observable failures, correct evaluation, and reliable tooling.</p>
+            <ul class="skill-list" aria-label="Technical areas">
+              <li>TLA+</li><li>TLAPS / TLAPM</li><li>Python</li><li>C / C++</li><li>TypeScript</li><li>Linux</li><li>Docker</li><li>Kubernetes</li><li>PyTorch</li>
+            </ul>
+          </div>
+
+          <div class="education-card">
+            <span class="mono-label">Education</span>
+            <div>
+              <h3>B.Sc. in Computer Science &amp; Engineering</h3>
+              <p>Bangladesh University of Engineering and Technology (BUET)</p>
+              <p>Dhaka, Bangladesh - 2026</p>
+            </div>
+            <a class="card-link" href="/files/Munim_Thahmid_Resume.pdf" target="_blank" rel="noopener">Download resume <span aria-hidden="true">&darr;</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="contact-title">
+        <div class="contact reveal">
+          <p class="section-index">Contact</p>
+          <h2 id="contact-title">Interested in rigorous, dependable systems?</h2>
+          <p>I am always happy to discuss formal methods, systems research, and promising problems at their intersection.</p>
+          <a class="button" href="mailto:munimthahmid2@gmail.com">
+            Start a conversation
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </section>
     </div>
-</nav>
+  </main>
 
-<main>
+  <footer class="shell">
+    <span>&copy; <span id="year">2026</span> Munim Thahmid. Built with care in Dhaka.</span>
+    <div class="footer-links">
+      <a href="mailto:munimthahmid2@gmail.com">Email</a>
+      <a href="https://github.com/munimthahmid" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/munimthahmid/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
 
-    <!-- ── HERO ── -->
-    <section class="hero" id="about">
-        <div class="hero-photo">
-            <img src="profile.png" alt="">
-        </div>
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
 
-        <div class="hero-text">
-            <h1>Munim Thahmid</h1>
-            <p class="subtitle">
-                Final-year CSE student at BUET working on reliable and secure
-                software systems, agentic SRE, production failure analysis, and
-                AI-agent security.
-            </p>
-            <div class="hero-links">
-                <a href="mailto:munimthahmid2@gmail.com">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    Email
-                </a>
-                <a href="https://github.com/munimthahmid" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                    GitHub
-                </a>
-                <a href="https://scholar.google.com/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-                    Google Scholar
-                </a>
-                <a href="MUNIM_THAHMID.pdf" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    CV
-                </a>
-                <a href="https://www.linkedin.com/in/munim-thahmid" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
 
-    <!-- ── ABOUT ── -->
-    <section>
-        <div class="section-label">About</div>
-        <div class="about-text">
-            <p>
-                I am a final-year Computer Science &amp; Engineering student at Bangladesh University of
-                Engineering and Technology (BUET). My research interests are in <strong>reliable and
-                secure software systems</strong>, with a focus on <strong>agentic SRE</strong>,
-                <strong>production failure analysis</strong>, <strong>software reliability</strong>,
-                and <strong>AI-agent security</strong>.
-            </p>
-            <p>
-                I am currently a Summer Research Intern at the University of Illinois
-                Urbana-Champaign, advised by Prof. Tianyin Xu, where I work on the safety
-                and reliability of agentic SRE systems. My current work studies real-world
-                production failures and how they can be characterized, reproduced, and used
-                to evaluate AI agents for systems diagnosis and recovery.
-            </p>
-            <p>
-                I am also interested in AI-agent security, especially in settings where agents
-                interact with tools, code, infrastructure, user data, and operational environments.
-                More broadly, I want to build and evaluate AI-operated software systems that are
-                reliable, secure, and safe in practice.
-            </p>
-            <p>
-                Previously, my undergraduate thesis, advised by Dr. Sadia Sharmin, studied
-                multilingual speech models for Bengali through layer-wise probing across Whisper
-                and XLS-R. This work gave me experience in model interpretation, probing-based
-                evaluation, and low-resource ML analysis.
-            </p>
-            <p>
-                Alongside academic work, I spent over a year at Yobo AI building backend systems,
-                testing infrastructure, and production features for AI voice-agent applications.
-            </p>
-        </div>
-        <div class="interests">
-            <span class="interest-tag">Reliable &amp; Secure Software Systems</span>
-            <span class="interest-tag">Agentic SRE</span>
-            <span class="interest-tag">Production Failure Analysis</span>
-            <span class="interest-tag">Software Reliability &amp; Testing</span>
-            <span class="interest-tag">AI-Agent Security</span>
-            <span class="interest-tag">Agentic Systems Safety</span>
-        </div>
-    </section>
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
 
-    <!-- ── PUBLICATIONS ── -->
-    <section id="publications">
-        <div class="section-label">Publications</div>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-        <div class="pub-item">
-            <div class="pub-title">
-                Interpreting Multilingual Speech Models for Bengali: Cross-Model Probing
-                and Representation-Guided Adaptation
-            </div>
-            <div class="pub-authors">
-                <strong>Munim Thahmid</strong>, Sadia Sharmin
-            </div>
-            <div class="pub-venue">Accepted to INTERSPEECH 2026</div>
-        </div>
-    </section>
-
-    <!-- ── PROJECTS ── -->
-    <section id="projects">
-        <div class="section-label">Selected Projects</div>
-
-        <div class="project-group">
-        <div class="project-group-label">Research Projects</div>
-
-        <div class="project-item">
-            <div class="project-name">Real-World Production Failure Analysis for Agentic SRE</div>
-            <div class="project-desc">
-                Research at UIUC advised by Prof. Tianyin Xu on the safety and reliability
-                of agentic SRE systems. Studying real-world production failures and how they
-                can be characterized, reproduced, and used to evaluate AI agents for diagnosis,
-                mitigation, and recovery in realistic software operations environments.
-            </div>
-            <div class="project-tech">
-                <span class="tech-tag">Agentic SRE</span>
-                <span class="tech-tag">Production Systems</span>
-                <span class="tech-tag">Failure Diagnosis</span>
-                <span class="tech-tag">Software Reliability</span>
-                <span class="tech-tag">AI Agents</span>
-                <span class="tech-tag">Systems Safety</span>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <div class="project-name">Bengali Speech Representation Analysis &amp; ASR Adaptation</div>
-            <div class="project-desc">
-                BUET thesis on interpreting Bengali representations in multilingual speech
-                models using FLEURS, Common Voice Bengali, and MMS forced alignment.
-                Layer-wise probing across Whisper and XLS-R showed intermediate layers
-                strongest for Whisper language separation, and XLS-R-300M substantially
-                stronger than tested Whisper variants on Bengali aligned-unit probing,
-                reaching macro-F1 0.6884 in the pilot setup.
-            </div>
-            <div class="project-tech">
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">Whisper</span>
-                <span class="tech-tag">XLS-R</span>
-                <span class="tech-tag">FLEURS</span>
-                <span class="tech-tag">MMS</span>
-            </div>
-        </div>
-        </div><!-- /research -->
-
-        <div class="project-group">
-        <div class="project-group-label">Industry Projects</div>
-
-        <div class="project-item">
-            <div class="project-name"><a href="https://loopz.ai" target="_blank">Loopz.ai ↗</a></div>
-            <div class="project-desc">
-                Production voice AI platform with real-time conversational agents. Architected
-                the end-to-end voice pipeline, LLM integration, and telephony infrastructure.
-            </div>
-            <div class="project-tech">
-                <span class="tech-tag">Vapi</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Supabase</span>
-                <span class="tech-tag">ElevenLabs</span>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <div class="project-name"><a href="https://assistmind.ai" target="_blank">AssistMind.ai ↗</a></div>
-            <div class="project-desc">
-                AI-powered voice assistant platform with configurable agents, Stripe billing,
-                and real-time analytics dashboard. Built full backend and billing infrastructure.
-            </div>
-            <div class="project-tech">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">Supabase</span>
-                <span class="tech-tag">Stripe</span>
-                <span class="tech-tag">LiveKit</span>
-                <span class="tech-tag">Deepgram</span>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <div class="project-name"><a href="https://phoneline.helloyobo.com" target="_blank">HelloYobo Phoneline ↗</a></div>
-            <div class="project-desc">
-                Voice AI phone system for automated customer interactions. Designed the call
-                routing logic, speech pipeline, and conversation state management.
-            </div>
-            <div class="project-tech">
-                <span class="tech-tag">Vapi</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Deepgram</span>
-            </div>
-        </div>
-        </div><!-- /industry -->
-    </section>
-
-    <!-- ── EXPERIENCE ── -->
-    <section id="experience">
-        <div class="section-label">Experience</div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-role">Summer Research Intern</span>
-                <span class="exp-date">May 2026 — Present</span>
-            </div>
-            <div class="exp-org">University of Illinois Urbana-Champaign</div>
-            <div class="exp-desc">
-                Advised by Prof. Tianyin Xu. Working on the safety and reliability of
-                agentic SRE systems by studying real-world production failures and how
-                they can be characterized, reproduced, and used to evaluate AI agents for
-                systems diagnosis and recovery.
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-role">Software Engineer Intern &rarr; Software Engineer (Part-time)</span>
-                <span class="exp-date">Oct 2024 — Feb 2026</span>
-            </div>
-            <div class="exp-org">Yobo AI — Remote</div>
-            <div class="exp-desc">
-                Built backend systems, testing infrastructure, and production features for AI
-                voice-agent applications. Developed an automated Python testing platform that
-                reduced regression cycles from 8 hours to 15 minutes, enabling faster and more
-                reliable deployment.
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-role">Undergraduate Thesis Researcher</span>
-                <span class="exp-date">2025 — present</span>
-            </div>
-            <div class="exp-org">BUET — Dept. of Computer Science &amp; Engineering</div>
-            <div class="exp-desc">
-                Thesis on interpreting multilingual speech models for Bengali, advised by
-                Dr. Sadia Sharmin. Cross-model probing across Whisper and XLS-R, with
-                representation-guided adaptation for low-resource ASR.
-            </div>
-        </div>
-    </section>
-
-    <!-- ── EDUCATION ── -->
-    <section id="education">
-        <div class="section-label">Education</div>
-
-        <div class="edu-item">
-            <div class="edu-degree">B.Sc. in Computer Science &amp; Engineering</div>
-            <div class="edu-school">Bangladesh University of Engineering and Technology (BUET)</div>
-            <div class="edu-details">Jan 2022 — May 2026</div>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <p>Munim Thahmid · Updated June 2026</p>
-</footer>
-
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    }
+  </script>
 </body>
 </html>

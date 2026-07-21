@@ -1,25 +1,9 @@
-# main links links
 main:
-  # - title: "Publications"
-  #   url: /publications/
-
-  # - title: "Talks"
-  # #   url: /talks/
-
-  # - title: "Teaching"
-  # #   url: /teaching/
-
-  # - title: "Portfolio"
-  # #   url: /portfolio/
-
-  # - title: "Blog Posts"
-  # #   url: /year-archive/
+  - title: "Research"
+    url: /#research
+  - title: "Publication"
+    url: /#publication
   - title: "Projects"
     url: /projects/
   - title: "Resume"
-    url: /files/RESUME.pdf
-  - title: "CV"
-    url: /MUNIM_THAHMID.pdf
-
-  # - title: "Guide"
-  # #   url: /markdown/
+    url: /files/Munim_Thahmid_Resume.pdf

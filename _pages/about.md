@@ -1,39 +1,18 @@
 ---
-permalink: /
-title: "👋🏼 Hello there, I'm Munim!"
-excerpt: "About me"
+permalink: /about/
+title: "About"
+excerpt: "About Munim Thahmid"
 author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
 ---
 
-I am a final-year Computer Science & Engineering student at Bangladesh University of Engineering and Technology (BUET).
+I am a recent Computer Science and Engineering graduate from Bangladesh University of Engineering and Technology (BUET). My research interests are in **formal methods and dependable software systems**, particularly formal verification for distributed and production systems and machine-assisted reasoning with TLA+ and TLAPS.
 
-## About Me
+I am currently a research intern at the University of Illinois Urbana-Champaign, advised by [Prof. Tianyin Xu](https://tianyin.github.io/). I contribute to [TLAPS-Bench](https://github.com/specula-org/tlaps-bench), a benchmark and evaluation framework for AI-generated TLA+ proofs. My contributions span scalable proof verification, evaluator reliability, continuation strategies, and model execution infrastructure.
 
-My research interests are in reliable and secure software systems, with a focus on agentic SRE, production failure analysis, software reliability, and AI-agent security.
+I also study the safety and reliability of AI agents for software operations. In SREGym, I developed a reproducible Kubernetes node conntrack-exhaustion scenario to test whether agents can diagnose failures that disrupt their normal access paths.
 
-I am currently a Summer Research Intern at the University of Illinois Urbana-Champaign, advised by Prof. Tianyin Xu, where I work on the safety and reliability of agentic SRE systems. My current work studies real-world production failures and how they can be characterized, reproduced, and used to evaluate AI agents for systems diagnosis and recovery.
+My undergraduate research with Dr. Sadia Sharmin examined Bengali speech representations across Whisper and XLS-R. Our paper, **"Layer-wise Probing of Whisper's Encoder Representations for Bengali Phone-like Units,"** was accepted to INTERSPEECH 2026.
 
-I am also interested in AI-agent security, especially in settings where agents interact with tools, code, infrastructure, user data, and operational environments. More broadly, I want to build and evaluate AI-operated software systems that are reliable, secure, and safe in practice.
+Before focusing full-time on research, I spent over a year at Yobo AI building backend systems, testing infrastructure, and production features for AI voice-agent applications.
 
-Previously, my undergraduate thesis, advised by Dr. Sadia Sharmin, studied multilingual speech models for Bengali through layer-wise probing across Whisper and XLS-R. This work gave me experience in model interpretation, probing-based evaluation, and low-resource ML analysis.
-
-Alongside academic work, I spent over a year at Yobo AI building backend systems, testing infrastructure, and production features for AI voice-agent applications.
-
----
-
-## Selected Experience
-
-### Summer Research Intern
-
-University of Illinois Urbana-Champaign, May 2026 - Present. Advised by Prof. Tianyin Xu.
-
-### Software Engineer Intern / Software Engineer (Part-time)
-
-Yobo AI, Oct 2024 - Feb 2026. Built backend systems, testing infrastructure, and production features for AI voice-agent applications.
-
-### Undergraduate Thesis Researcher
-
-BUET, 2025 - present. Advised by Dr. Sadia Sharmin; studied multilingual speech models for Bengali through layer-wise probing across Whisper and XLS-R.
+[Download my resume](/files/Munim_Thahmid_Resume.pdf){: .btn .btn--primary }
