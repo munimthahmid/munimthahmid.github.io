@@ -7,7 +7,7 @@ author_profile: true
 
 I am a recent Computer Science and Engineering graduate from Bangladesh University of Engineering and Technology (BUET). My research interests are in **formal methods and dependable software systems**, particularly formal verification for distributed and production systems and machine-assisted reasoning with TLA+ and TLAPS.
 
-I am currently a research intern at the University of Illinois Urbana-Champaign, advised by [Prof. Tianyin Xu](https://tianyin.github.io/). I contribute to [TLAPS-Bench](https://github.com/specula-org/tlaps-bench), a benchmark and evaluation framework for AI-generated TLA+ proofs. My contributions span scalable proof verification, evaluator reliability, continuation strategies, and model execution infrastructure.
+I am currently a research intern at the University of Illinois Urbana-Champaign, advised by [Prof. Tianyin Xu](https://tianyin.github.io/). I contribute to [TLAPS-Bench](https://github.com/specula-org/tlaps-bench), a benchmark for evaluating AI systems on completing and constructing machine-checkable TLA+ proofs. My work focuses on rigorous evaluation methodology and scalable verification for machine-assisted formal reasoning.
 
 I also study the safety and reliability of AI agents for software operations. In SREGym, I developed a reproducible Kubernetes node conntrack-exhaustion scenario to test whether agents can diagnose failures that disrupt their normal access paths.
 
