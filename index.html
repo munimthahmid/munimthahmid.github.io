@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Munim Thahmid researches formal methods, machine-assisted reasoning, and AI agents for dependable software systems.">
-  <meta property="og:title" content="Munim Thahmid - Formal Methods &amp; Software Systems">
-  <meta property="og:description" content="Research in formal methods, machine-assisted reasoning, and AI agents for dependable software systems.">
+  <meta name="description" content="Munim Thahmid researches trustworthy software, formal verification, neuro-symbolic AI, and machine-checkable methods for improving LLM reasoning and verification.">
+  <meta property="og:title" content="Munim Thahmid - Trustworthy Software &amp; Neuro-Symbolic AI">
+  <meta property="og:description" content="Research on formal verification, neuro-symbolic AI, and rigorous evaluation of frontier language models for dependable software systems.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://munimthahmid.github.io">
   <meta property="og:image" content="https://munimthahmid.github.io/profile.png">
-  <title>Munim Thahmid - Formal Methods &amp; Software Systems</title>
+  <title>Munim Thahmid - Trustworthy Software &amp; Neuro-Symbolic AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
       "https://github.com/munimthahmid",
       "https://www.linkedin.com/in/munimthahmid/"
     ],
-    "knowsAbout": ["Formal methods", "TLA+", "TLAPS", "Machine-assisted reasoning", "Site Reliability Engineering", "Software systems"]
+    "knowsAbout": ["Formal verification", "Neuro-symbolic AI", "TLA+", "TLAPS", "Theorem proving", "LLM evaluation", "Site Reliability Engineering", "Dependable software systems"]
   }
   </script>
 
@@ -378,11 +378,11 @@
     <section class="hero" id="top" aria-labelledby="name">
       <div class="portrait"><img src="profile.png" alt="Munim Thahmid"></div>
       <div class="hero-copy">
-        <p class="field-line">FORMAL METHODS &middot; SOFTWARE SYSTEMS</p>
+        <p class="field-line">TRUSTWORTHY SOFTWARE &middot; NEURO-SYMBOLIC AI</p>
         <h1 id="name">Munim Thahmid</h1>
         <p class="affiliation">Research Intern, University of Illinois Urbana-Champaign<br>Recent CSE graduate, BUET</p>
-        <p class="bio">I work on formal methods and dependable software systems. My primary research examines how AI systems can construct and complete machine-checkable TLA+ proofs and how such systems should be evaluated rigorously. I also contribute to SREGym, which evaluates AI agents on realistic Site Reliability Engineering problems in live system environments.</p>
-        <p class="interests"><strong>Research interests:</strong> formal verification, machine-assisted reasoning, AI for SRE, distributed systems, and software reliability.</p>
+        <p class="bio">My research focuses on making software systems more trustworthy as AI-generated code becomes increasingly common. I am especially interested in neuro-symbolic systems where LLMs generate or refine code, formal specifications, and proofs, while theorem provers and model checkers provide machine-checkable feedback. I want to study how this feedback can guide, evaluate, and improve the reasoning and verification capabilities of LLMs so that correctness and safety are built in from the beginning.</p>
+        <p class="interests"><strong>Research interests:</strong> neuro-symbolic AI for software engineering, formal verification, improving LLM reasoning and verification, dependable distributed systems, and software reliability.</p>
         <ul class="profile-links" aria-label="Profile links">
           <li><a href="mailto:munimthahmid2@gmail.com">Email</a></li>
           <li><a href="https://github.com/munimthahmid" target="_blank" rel="noopener">GitHub</a></li>
@@ -396,25 +396,37 @@
       <div class="section-label"><h2 id="research-heading">Research</h2></div>
       <div class="section-content">
         <article class="research-item">
-          <h3>Machine-assisted formal reasoning</h3>
+          <h3>TLAPS-Bench: Verifier-backed evaluation of frontier LLMs</h3>
           <p class="meta">University of Illinois Urbana-Champaign &middot; Advisor: Prof. Tianyin Xu</p>
-          <p>I contribute to <a href="https://github.com/specula-org/tlaps-bench" target="_blank" rel="noopener">TLAPS-Bench</a>, a benchmark for evaluating AI systems on completing and constructing machine-checkable TLA+ proofs. My work focuses on the methodology required for credible experiments: scalable proof verification, reliable multi-round evaluation, and accurate measurement of model behavior and cost.</p>
-          <p>More broadly, I am interested in how machine assistance can make formal reasoning practical for complex software systems without weakening correctness guarantees.</p>
-          <a class="text-link" href="https://github.com/specula-org/tlaps-bench" target="_blank" rel="noopener">Project repository &rarr;</a>
+          <p>I co-lead <a href="https://specula-org.github.io/tlaps-bench-website/" target="_blank" rel="noopener">TLAPS-Bench</a>, a 956-task benchmark across 71 TLA+ system specifications for evaluating frontier LLMs on proof completion and proof generation. Every answer is replayed and checked by TLAPM, so success means producing a mechanically accepted proof rather than a plausible-looking response.</p>
+          <p>I evaluate GPT-5.6 Sol, GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro across agentic and single-turn settings. On a matched 293-task slice, GPT-5.6 Sol reached 99.0% task pass with iterative verifier feedback versus 18.8% single-turn. My work spans evaluator contracts, canonical replay, anti-cheating checks, reproducible runners, and analysis of how reasoning effort, proof scaffolding, specification complexity, and verifier feedback shape model behavior.</p>
+          <a class="text-link" href="https://specula-org.github.io/tlaps-bench-website/" target="_blank" rel="noopener">Benchmark website &rarr;</a>
+          &nbsp;&nbsp;
+          <a class="text-link" href="https://github.com/specula-org/tlaps-bench" target="_blank" rel="noopener">Code &rarr;</a>
         </article>
 
         <article class="research-item">
           <h3>SREGym: AI agents for software reliability</h3>
-          <p class="meta">AI agents for Site Reliability Engineering &middot; Current research</p>
-          <p>I contribute to <a href="https://github.com/SREGym/SREGym" target="_blank" rel="noopener">SREGym</a>, an AI-native platform for developing and evaluating SRE agents in live system environments with realistic cloud-system failures.</p>
-          <p>My work includes building reproducible Kubernetes incidents, including node conntrack exhaustion that can disrupt an agent's normal diagnostic access path. These scenarios test whether agents can reason about degraded systems and recover them safely.</p>
-          <a class="text-link" href="https://github.com/SREGym/SREGym" target="_blank" rel="noopener">Project repository &rarr;</a>
+          <p class="meta">University of Illinois Urbana-Champaign &middot; Current research</p>
+          <p>I am building <a href="https://www.sregym.com/" target="_blank" rel="noopener">SREGym</a>, a live benchmark with 90 realistic SRE problems and 3,623 fault-target pairs. It evaluates whether LLM agents can diagnose and safely recover real cloud and Kubernetes systems under controlled clean and noisy incidents.</p>
+          <p>My work spans benchmark integration and evaluation infrastructure, including reproducible failure scenarios, state-based recovery oracles, independent agent and judge endpoints, and a nine-question LLM-as-a-Judge rubric validated against experts with Cohen's kappa of 0.90.</p>
+          <a class="text-link" href="https://www.sregym.com/" target="_blank" rel="noopener">Benchmark website &rarr;</a>
+          &nbsp;&nbsp;
+          <a class="text-link" href="https://github.com/SREGym/SREGym" target="_blank" rel="noopener">Code &rarr;</a>
+        </article>
+
+        <article class="research-item">
+          <h3>Script Matters / BanglishBench</h3>
+          <p class="meta">B.Sc. thesis &middot; Multilingual LLM reliability</p>
+          <p>I built a controlled benchmark with 1,174 aligned Bangla, Banglish, and English items to test whether language-model behavior remains reliable when meaning is held constant but script changes. I evaluated three local Qwen models and five hosted frontier LLMs, including GPT-5.5 and Claude Sonnet 4.6, under frozen prompts and parsers, then traced script-conditioned failures through tokenization, recoverability, and format compliance.</p>
+          <p>I also fine-tuned Qwen2.5-3B with Hugging Face PEFT/LoRA on Banglish-only and balanced multilingual data, using source-disjoint splits, paired bootstrap intervals, and McNemar tests to measure robustness improvements.</p>
+          <a class="text-link" href="https://github.com/munimthahmid/BanglishBench" target="_blank" rel="noopener">Project repository &rarr;</a>
         </article>
 
         <article class="research-item">
           <h3>Bengali speech representations</h3>
           <p class="meta">BUET &middot; Supervisor: Dr. Sadia Sharmin</p>
-          <p>My undergraduate research examined where Bengali phone-like information emerges across Whisper encoder layers using speaker-disjoint probing, cross-model comparison with XLS-R, and robustness analyses. The resulting paper was accepted to INTERSPEECH 2026.</p>
+          <p>My first-author undergraduate research examined where Bengali phone-like information emerges across Whisper encoder layers using speaker-disjoint probing, cross-model comparison with XLS-R, controlled ablations, and robustness analyses. The resulting paper was accepted to INTERSPEECH 2026.</p>
         </article>
       </div>
     </section>
@@ -440,13 +452,13 @@
             <span class="date">May 2026 - Present</span>
           </div>
           <p class="organization">University of Illinois Urbana-Champaign &middot; Advisor: Prof. Tianyin Xu</p>
-          <p>Research on machine-assisted formal reasoning and dependable systems, with current work on evaluating AI-generated TLA+ proofs.</p>
+          <p>Co-leading TLAPS-Bench and building SREGym, with research spanning verifier-backed frontier-LLM evaluation, machine-assisted formal reasoning, and dependable software systems.</p>
         </article>
 
         <article class="experience-item">
           <div class="experience-head">
-            <h3>Software Engineer</h3>
-            <span class="date">Oct 2024 - Feb 2026</span>
+            <h3>Software Developer, AI Systems</h3>
+            <span class="date">Sep 2024 - Feb 2026</span>
           </div>
           <p class="organization">Yobo AI &middot; Intern, then part-time engineer</p>
           <p>Spent over a year building backend systems, testing infrastructure, and production features for AI voice-agent applications.</p>
@@ -468,7 +480,7 @@
       <div class="section-content">
         <p class="education-name">Bangladesh University of Engineering and Technology (BUET)</p>
         <p class="education-degree">B.Sc. in Computer Science and Engineering</p>
-        <p class="education-meta">Dhaka, Bangladesh &middot; January 2022 - May 2026</p>
+        <p class="education-meta">CGPA: 3.46/4.00 &middot; Dhaka, Bangladesh &middot; January 2022 - May 2026</p>
       </div>
     </section>
 
@@ -478,6 +490,6 @@
     </section>
   </main>
 
-  <footer class="container">Last updated July 2026.</footer>
+  <footer class="container">Last updated August 2026.</footer>
 </body>
 </html>
