@@ -3,9 +3,10 @@
   const preference = window.matchMedia('(prefers-color-scheme: dark)');
   let saved;
   try { saved = localStorage.getItem('munim-theme'); } catch (_) { /* System theme remains available. */ }
-  if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
+  let explicitTheme = saved === 'light' || saved === 'dark' ? saved : null;
+  root.dataset.theme = explicitTheme || (preference.matches ? 'dark' : 'light');
 
-  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : preference.matches;
+  const isDark = () => root.dataset.theme === 'dark';
 
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.theme-toggle');
@@ -18,11 +19,15 @@
     };
     button.style.display = 'inline-flex';
     button.addEventListener('click', () => {
-      root.dataset.theme = isDark() ? 'light' : 'dark';
-      try { localStorage.setItem('munim-theme', root.dataset.theme); } catch (_) { /* Theme still works without storage. */ }
+      explicitTheme = isDark() ? 'light' : 'dark';
+      root.dataset.theme = explicitTheme;
+      try { localStorage.setItem('munim-theme', explicitTheme); } catch (_) { /* Theme still works without storage. */ }
       update();
     });
-    preference.addEventListener('change', update);
+    preference.addEventListener('change', () => {
+      if (!explicitTheme) root.dataset.theme = preference.matches ? 'dark' : 'light';
+      update();
+    });
     update();
   });
 })();
