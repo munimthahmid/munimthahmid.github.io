@@ -2,3 +2,7 @@
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
+
+{% if page.analytics != false %}
+<script defer src="{{ base_path }}/assets/js/visitor-analytics.js"></script>
+{% endif %}

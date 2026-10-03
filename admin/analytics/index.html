@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Analytics access · Munim Thahmid</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/site.css?v=2">
+  <script src="/assets/js/theme.js?v=2"></script>
+  <style>
+    main { max-width: 680px; margin: 10vh auto; padding: 28px; }
+    h1 { font: 500 2.5rem/1.2 var(--serif); margin-bottom: 20px; }
+    p { margin: 16px 0; }
+    .eyebrow { color: var(--muted); font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+    .panel { margin: 28px 0; padding: 24px; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; }
+    .button { display: inline-block; padding: 10px 20px; border-radius: 6px; background: var(--accent); color: var(--background); text-decoration: none; border: 0; cursor: pointer; }
+    button { padding: 8px 14px; background: var(--background); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+    .small { color: var(--muted); font-size: .9rem; }
+  </style>
+  <script defer src="/assets/js/analytics-access.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Owner access</p>
+    <h1>Website analytics</h1>
+    <p>Sign in to your private Umami dashboard to see visitors, page views, traffic sources, locations, devices, and link clicks.</p>
+    <div class="panel">
+      <p id="tracking-status" role="status">Checking tracking configuration…</p>
+      <a class="button" href="https://cloud.umami.is/login" rel="noreferrer">Sign in to analytics ↗</a>
+      <p class="small">Your analytics account controls access. Visitor data and passwords are never stored on this public website. Keep dashboard sharing disabled.</p>
+    </div>
+    <h2>Exclude your own visits</h2>
+    <p class="small">This setting applies to this browser only. It does not sign you in or change access to the dashboard.</p>
+    <button id="exclude-visits" type="button" disabled>Checking browser setting…</button>
+    <p id="exclusion-status" class="small" role="status"></p>
+    <p class="small">Counts begin after activation. Unique visitor counts are estimates; blockers and privacy settings can prevent tracking. History availability depends on your analytics plan.</p>
+    <noscript><p>JavaScript is needed to check configuration and exclude this browser. You can still use the sign-in link above.</p></noscript>
+    <p><a href="/">← Return to website</a></p>
+  </main>
+</body>
+</html>

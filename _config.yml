@@ -142,6 +142,8 @@ include:
   - _pages
   - files
 exclude:
+  - tests
+  - ANALYTICS.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
