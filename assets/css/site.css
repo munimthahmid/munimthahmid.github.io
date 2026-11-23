@@ -121,6 +121,9 @@ a:focus-visible .arrow { transform: translate(2px, -2px); }
 .publication-summary h3 a { color: var(--body); text-decoration: none; }
 .publication-summary h3 a:hover { color: var(--accent); }
 .publication-summary .venue { font-size: .875rem; color: var(--muted); margin-top: 7px; }
+.pub-entry + .pub-entry { margin-top: 20px; }
+.publication + .publication { margin-top: 34px; }
+.publication .item-links { margin-top: 14px; }
 .experience-item { position: relative; padding: 0 0 30px 25px; border-left: 1px solid var(--line); }
 .experience-item::before { position: absolute; left: -4px; top: 11px; content: ""; width: 7px; height: 7px; border: 1px solid var(--muted); border-radius: 50%; background: var(--background); box-shadow: 0 0 0 4px var(--background); }
 .experience-item:first-of-type::before { background: var(--accent); border-color: var(--accent); }
