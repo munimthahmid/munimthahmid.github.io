@@ -49,20 +49,25 @@
       <h1 class="page-title">About me</h1>
       <div class="intro">
         <p>I believe AI offers an unprecedented opportunity to rethink how we build and operate software systems. My research focuses on making these systems, and the AI agents that build and manage them, reliable, safe, and trustworthy through realistic failure-driven evaluation and formal verification.</p>
-        <p>I'm a research intern at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>, advised by <a href="https://tianyin.github.io/">Prof. Tianyin Xu</a>, and a software engineer at <a href="https://priyo.com/">Priyo</a>. I graduated in Computer Science and Engineering from <a href="https://www.buet.ac.bd/">BUET</a>. Previously, I built backend systems for AI voice agents at Yobo AI.</p>
+        <p>I'm a research intern at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>, advised by <a href="https://tianyin.github.io/">Prof. Tianyin Xu</a>, and a software engineer at <a href="https://priyo.com/">Priyo</a>. I graduated in Computer Science and Engineering from <a href="https://www.buet.ac.bd/">BUET</a>.</p>
       </div>
 
       <section class="section" id="research" aria-labelledby="research-heading">
         <div class="section-heading"><h2 id="research-heading">Selected research</h2></div>
         <article class="research-item">
           <h3 class="research-title"><a href="https://www.sregym.com/">SREGym</a></h3>
-          <p>We test AI agents on real cloud failures. I contribute failure scenarios and evaluation infrastructure for diagnosis and safe recovery.</p>
+          <p>An open-source benchmark that injects realistic faults into live cloud-native systems to test whether AI agents can diagnose and fix production failures. I'm one of its maintainers and am building SREGym 2.0, which reproduces major real-world outages as long-horizon tasks.</p>
           <div class="item-links"><a href="https://www.sregym.com/">Project <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/SREGym/SREGym">Code <span class="arrow" aria-hidden="true">↗</span></a></div>
         </article>
         <article class="research-item">
           <h3 class="research-title"><a href="https://specular-org.github.io/tlaps-bench-website/">TLAPS-Bench</a></h3>
-          <p>We evaluate how well AI models construct TLA+ proofs checked by TLAPS. I work on evaluation methodology and reproducible verification.</p>
+          <p>A benchmark of 265 proof targets from 95 TLA+ specifications of real-world systems that tests whether AI agents can write machine-checked proofs from scratch. I built its reproducible evaluation harness.</p>
           <div class="item-links"><a href="https://arxiv.org/abs/2611.02849">Paper <span class="arrow" aria-hidden="true">↗</span></a><a href="https://specular-org.github.io/tlaps-bench-website/">Project <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/specular-org/tlaps-bench">Code <span class="arrow" aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="research-item">
+          <h3 class="research-title"><a href="https://github.com/specular-org/Specular">Specula</a></h3>
+          <p>Uses AI agents to write and model-check TLA+ specifications of real distributed systems to find deep bugs. I improve the reliability of its verification pipeline and turn the bugs it finds into upstream fixes to open-source projects.</p>
+          <div class="item-links"><a href="https://github.com/specular-org/Specular">Code <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/k8ssandra/cass-operator/pull/974">cass-operator fix <span class="arrow" aria-hidden="true">↗</span></a></div>
         </article>
       </section>
 
@@ -73,11 +78,15 @@
           <div>
             <div class="pub-entry">
               <h3><a href="https://arxiv.org/abs/2611.02849">TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System <span class="arrow" aria-hidden="true">↗</span></a></h3>
-              <p class="venue">arXiv preprint · Under review at MLSys</p>
+              <p class="venue">arXiv preprint, 2026</p>
+            </div>
+            <div class="pub-entry">
+              <h3><a href="/publications/">From Deployment to Disturbance: Deployment Defects in Cloud-Native Software Projects <span class="arrow" aria-hidden="true">↗</span></a></h3>
+              <p class="venue">Third author · Manuscript under review</p>
             </div>
             <div class="pub-entry">
               <h3><a href="https://www.isca-archive.org/interspeech_2026/thahmid26_interspeech.html">Layer-wise Probing of Whisper's Encoder Representations for Bengali Phone-like Units <span class="arrow" aria-hidden="true">↗</span></a></h3>
-              <p class="venue">INTERSPEECH · With Sadia Sharmin</p>
+              <p class="venue">INTERSPEECH 2026 · With Sadia Sharmin</p>
             </div>
           </div>
         </div>
