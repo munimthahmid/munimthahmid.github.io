@@ -48,7 +48,7 @@
     <main class="content" id="main" tabindex="-1">
       <h1 class="page-title">About me</h1>
       <div class="intro">
-        <p>I believe AI offers an unprecedented opportunity to rethink how we build and operate software systems. My research focuses on making these systems, and the AI agents that build and manage them, reliable, safe, and trustworthy through realistic failure-driven evaluation and formal verification.</p>
+        <p>I want to build dependable software systems that AI agents can safely operate and evolve. My research explores systems reliability, realistic failure-driven evaluation, and formal verification, with a particular interest in independently establishing the correctness of autonomous actions.</p>
         <p>I'm a research intern at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>, advised by <a href="https://tianyin.github.io/">Prof. Tianyin Xu</a>, and a software engineer at <a href="https://priyo.com/">Priyo</a>. I graduated in Computer Science and Engineering from <a href="https://www.buet.ac.bd/">BUET</a>.</p>
       </div>
 
@@ -56,12 +56,12 @@
         <div class="section-heading"><h2 id="research-heading">Selected research</h2></div>
         <article class="research-item">
           <h3 class="research-title"><a href="https://www.sregym.com/">SREGym</a></h3>
-          <p>An open-source benchmark that injects realistic faults into live cloud-native systems to test whether AI agents can diagnose and fix production failures. I'm one of its maintainers and am building SREGym 2.0, which reproduces major real-world outages as long-horizon tasks.</p>
-          <div class="item-links"><a href="https://www.sregym.com/">Project <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/SREGym/SREGym">Code <span class="arrow" aria-hidden="true">↗</span></a></div>
+          <p>An open-source benchmark for evaluating AI agents on failures in live cloud-native systems. I maintain SREGym, develop state-based recovery oracles, and review and test postmortem-based tasks. My redesign of its diagnosis pipeline improved pass rates from 59% to 73% across 740 diagnoses (10 decision models, 37 problems). I'm now building SREGym 2.0, which reconstructs major production outages, including <a href="https://github.com/SREGym/SREGym/pull/1137">Datadog's 2023 multi-region outage</a>, as long-horizon tasks.</p>
+          <div class="item-links"><a href="https://www.sregym.com/">Project <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/SREGym/SREGym">Code <span class="arrow" aria-hidden="true">↗</span></a><a href="https://www.sregym.com/blog/improving-sre-diagnosis-pipeline">Diagnosis blog (first author) <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/SREGym/SREGym/pull/1121">Diagnosis evaluation <span class="arrow" aria-hidden="true">↗</span></a><a href="https://www.sregym.com/blog/postmortems-to-sre-benchmarks">Postmortem blog (third author) <span class="arrow" aria-hidden="true">↗</span></a></div>
         </article>
         <article class="research-item">
           <h3 class="research-title"><a href="https://specular-org.github.io/tlaps-bench-website/">TLAPS-Bench</a></h3>
-          <p>A benchmark of 265 proof targets from 95 TLA+ specifications of real-world systems that tests whether AI agents can write machine-checked proofs from scratch. I helped build its reproducible evaluation harness.</p>
+          <p>A benchmark of 265 proof targets from 95 real-world TLA+ specifications for evaluating whether AI agents can write machine-checked proofs from scratch. I built a reproducible evaluation harness with independent TLAPS verification and investigated apparent passes relying on unproved lemmas or unintended proof dependencies. The project uncovered 46 specification defects (35 fixed) and enabled proofs of previously unproved properties in cache coherence, consensus, and write-ahead logging.</p>
           <div class="item-links"><a href="https://arxiv.org/abs/2611.02849">Paper <span class="arrow" aria-hidden="true">↗</span></a><a href="https://specular-org.github.io/tlaps-bench-website/">Project <span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/specular-org/tlaps-bench">Code <span class="arrow" aria-hidden="true">↗</span></a></div>
         </article>
         <article class="research-item">
